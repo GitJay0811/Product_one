@@ -97,18 +97,84 @@ nav ul li a{
 #menu_control:checked  ~ header > nav{
     left: 0;
 }
-/*@media screen and (min-width:768px){
-    .nav{
-        position: relative;
-                top: 0;
-                left: 0;
-                width: auto;
-                height: auto;
-                background-color: transparent;
+@media screen and (min-width:480px){
+    header .ul{
+        display: flex;
+        flex-wrap: nowrap;
+        position: fixed;
+        top: 0;
+        left: 150px;
+        z-index: 5;
     }
-}*/
-
-
+    .ul li{
+        display: flex;
+        width: 100%;
+        height: 24px;
+        background-color: black;
+    }
+    .ul li + li{
+        margin-left: 10px;
+    }
+    body{
+        position: relative;
+        height: 1000px;
+    }
+}
+.nav_style{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+.nav_style_content{
+    position: relative;
+    width: 100%;
+    background-color: violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+    border: 0.5px solid rgb(156, 146, 146);
+    
+}
+.nav_style_content a::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.nav_style_content a{
+    font-family: DFKai-sb;
+    text-decoration: none;
+    color: #000;
+    margin-left: 5px;
+    font-size: 12px;
+}
+.nav_style_content img{
+    max-width: 13px;
+}
+.footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #000;
+    height: 24px;
+    color: #fff;
+    font-size: 12px;
+}
+.footer > i + i{
+    margin-left: 10px;
+}
+.footer a::before{
+    content: "";
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    transform: translateX(-10px);
+}
 /*Banner*/
 ul.slides{
 	position: relative;
