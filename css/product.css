@@ -44,8 +44,7 @@ header{
     width: 12px;
     box-shadow: 0 4px 0 #fff,0 -4px 0 #fff;
 }
-nav{
-   background-color: aqua; 
+nav{ 
    width:100vw;
    height: calc(100vh - 25px);
    position: absolute;
@@ -59,7 +58,7 @@ nav ul{
     flex-wrap: wrap;
 }
 nav ul li{
-    width: calc(50vw - 1px);
+    width: calc(50vw - 1.6px);
     background-color: rgb(53, 53, 53);
     border: 0.5px solid rgb(156, 146, 146);
     height: 30px;
@@ -94,10 +93,26 @@ nav ul li a{
     display: none;
     z-index: -2;
 }
+
 #menu_control:checked  ~ header > nav{
     left: 0;
+    content:"";
+	position: fixed;
+	top:25px;
+	right:0;
+	bottom:0;
+	left:0;
+	background-color: rgba(0,0,0,.8);
 }
-@media screen and (min-width:480px){
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 25px;
+    color: #fff;
+}
+/*@media screen and (min-width:480px){
     header .ul{
         display: flex;
         flex-wrap: nowrap;
@@ -119,7 +134,7 @@ nav ul li a{
         position: relative;
         height: 1000px;
     }
-}
+}*/
 .nav_style{
     display: flex;
     width: 100%;
@@ -161,7 +176,7 @@ nav ul li a{
     align-items: center;
     width: 100%;
     background-color: #000;
-    height: 24px;
+    height: 26px;
     color: #fff;
     font-size: 12px;
 }
