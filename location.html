@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+        #map {
+          height: 99%;
+          width: 40%;
+          position: absolute;
+          right: 1px;
+          top: 1px;;
+          border: 1px solid #000;
+         }
+         main{
+           display: flex;
+           flex-direction: column;
+           height: 100vh;
+           background-color: #ddd;
+           overflow-y: hidden;
+         }
+         .card{
+           position: relative;
+            display: flex;
+            /*background-color: rgb(174, 247, 101);*/
+            flex: 1;
+            border: 1px solid #000;
+         }
+         .card .content{
+           width: 60%;
+         }
+         .card .content h2,p{
+           width: 100%;
+           height: 33%;
+          /* background-color: lightcoral;*/
+         }
+         .card .content h2{
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           font-size: 24px;
+           font-weight: bold;
+           border-bottom: 1px solid #000;
+           background-color: rgb(243, 197, 204);
+         }
+         .card .content p{
+          display: flex;
+          align-items: center;
+          padding-left: 10px;
+         }
+      </style>
+</head>
+<body>
+    <main>
+      <div class="card">
+        <div class="content">
+          <h2>JAY門市</h2>
+          <p>電話 : 0912345678</p>
+          <p>地址 : 桃園市</p>
+        </div>
+        <div id="map"></div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>LUCY門市</h2>
+          <p>電話 : 0932586923</p>
+          <p>地址 : 新北市</p>
+        </div>
+        <div id="map"></div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>BELLE門市</h2>
+          <p>電話 : 0975826849</p>
+          <p>地址 : 台北市</p>
+        </div>
+        <div id="map"></div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>GILL門市</h2>
+          <p>電話 : 0932447418</p>
+          <p>地址 : 新竹市</p>
+        </div>
+        <div id="map"></div>
+      </div>
+      <div class="card">
+        <div class="content">
+          <h2>CHRIS門市</h2>
+          <p>電話 : 0996854726</p>
+          <p>地址 : 宜蘭市</p>
+        </div>
+        <div id="map"></div>
+      </div>
+    </main>
+    
+    <script>
+        function initMap() {
+          var point =[
+          {lat: 24.99339805854177, lng: 121.30099738172305},
+          {lat: 25.012267413969294, lng: 121.46554228060218},
+          {lat: 25.04120456194673, lng: 121.56632000806552},
+          {lat: 24.80673761542482, lng: 120.96894032360775},
+          {lat: 24.730773765842446, lng: 121.76310702223142}
+        ]
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 16,
+          center: point[0]
+        });
+
+        var marker = new google.maps.Marker({
+          position: point[0],
+          map: map
+        });
+
+        
+      };
+    </script>
+    <!--<script src="js/style.js"></script>-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD1xHR6W8gk3xAZSq50FT8FW1dSoGVWT60&callback=initMap"></script>
+</script>
+</body>
+</html>
