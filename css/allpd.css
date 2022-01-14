@@ -1,0 +1,60 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    height: 40px;
+    background-color:#000;
+    position: relative;
+}
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 40px;
+    color: #fff;
+    font-size: 12px;
+}
+main{
+    background-color: rgb(231, 230, 230);
+    height: 300px;
+    position: relative;
+}
+main > h2{
+    font-size: 48px;
+    display: block;
+    padding: 50px;
+    width: 100px;
+    margin: 0 auto;
+}
+.sortbox,.sortlist ul li{
+    height: 30px;
+    width: 100%;
+    padding: 5px 10px;
+    position: relative;
+    background-color:#ccc;
+}
+.sortlist{
+    display: none;
+}
+span{
+    display: inline-block;
+    height: 30px;
+    margin-top: 5px;
+}
+span::after{
+    content: "";
+    position:absolute;
+    top:12px;
+    right: 35px;
+    width: 20px;
+    height: 20px;
+    background:url("/Img/icon/downward-arrow.png");
+    background-size: cover;
+    z-index: 100;
+}
+ul li{
+    list-style: none;
+}
